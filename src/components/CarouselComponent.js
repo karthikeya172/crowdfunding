@@ -1,6 +1,5 @@
 import React from 'react';  
 import { Carousel } from 'react-bootstrap';  
-// import '/Users/karthikeyakatragadda/crowdfundingApp/crowdfunding-app/src/components/CarouselComponent.css'
 const projects = [  
   {  
     id: 1,  

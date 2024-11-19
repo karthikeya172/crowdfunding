@@ -7,9 +7,9 @@ const app = express();
 const PORT = process.env.PORT || 5001;  
 app.use(cors(
     {  
-    origin: 'http://localhost:3000', // Allow requests from this origin  
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed methods  
-    credentials: true // Allow credentials if needed  
+    origin: 'http://localhost:3000', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],  
+    credentials: true  
 }));  
 app.use(express.json());  
 mongoose.connect('mongodb://localhost:27017/campaignDB', {  
@@ -29,7 +29,6 @@ app.get('/api/campaigns', async (req, res) => {
 app.get('/api/campaigns/:id', async (req, res) => {
     const { id } = req.params;
   
-    // Validate ID format
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).json({ error: 'Invalid campaign ID format' });
     }

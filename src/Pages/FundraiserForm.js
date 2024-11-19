@@ -1,6 +1,6 @@
 import React, { useState } from 'react';  
 import { Container, Form, Button } from 'react-bootstrap';  
-
+import { useNavigate } from 'react-router-dom';
 const FundraiserForm = () => {  
     const [formData, setFormData] = useState({  
         title: '',  
@@ -12,7 +12,7 @@ const FundraiserForm = () => {
         organizerMobile: '',   
         fundsFor: ''  
     });  
-
+    const navigate = useNavigate();
     const handleChange = (e) => {  
         const { name, value } = e.target;  
         setFormData({  
@@ -23,8 +23,8 @@ const FundraiserForm = () => {
 
     const handleSubmit = (e) => {  
         e.preventDefault();  
-        console.log('Fundraiser Data:', formData);  
-        // Handle form submission to your backend API here, if needed.  
+        alert("Form successfully submitted!")
+        console.log('Fundraiser Data:', formData);    
     };  
 
     return (  

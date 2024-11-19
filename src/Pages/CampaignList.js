@@ -1,9 +1,6 @@
- 
-
 import React, { useEffect, useState } from 'react';  
 import axios from 'axios'; 
 import { useNavigate } from 'react-router-dom'; 
-import '/Users/karthikeyakatragadda/crowdfundingApp/crowdfunding-app/src/components/CampaignList.css'
 const CampaignList = () => {  
     const [campaigns, setCampaigns] = useState([]);  
     const [loading, setLoading] = useState(true);  
